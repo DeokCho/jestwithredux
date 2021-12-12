@@ -1,3 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders learn react link matches snapshot 1`] = `"aaa"`;
+exports[`renders learn react link matches snapshot 1`] = `
+Array [
+  <table>
+    <th>
+      이름
+    </th>
+    <th>
+      나이
+    </th>
+    <th>
+      직업
+    </th>
+  </table>,
+  <span>
+    이름
+    <input
+      name="name"
+      onChange={[Function]}
+      value=""
+    />
+  </span>,
+  <span>
+    나이
+    <input
+      name="age"
+      onChange={[Function]}
+      value=""
+    />
+  </span>,
+  <span>
+    직업
+    <input
+      name="job"
+      onChange={[Function]}
+      value=""
+    />
+  </span>,
+  <a
+    onClick={[Function]}
+  >
+    추가
+  </a>,
+]
+`;

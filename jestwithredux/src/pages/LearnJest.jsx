@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import "./LearnJest.css";
+import React, { useState, useEffect, Fragment } from "react";
 
 const LearnJest = () => {
   const [data, setData] = useState([]);
@@ -30,12 +29,14 @@ const LearnJest = () => {
         <th>나이</th>
         <th>직업</th>
         {data.length > 0 &&
-          data.map(({ name, age, job }) => (
-            <tr>
-              <td>{name}</td>
-              <td>{age}</td>
-              <td>{job}</td>
-            </tr>
+          data.map(({ name, age, job }, index) => (
+            <Fragment key={index}>
+              <tr>
+                <td>{name}</td>
+                <td>{age}</td>
+                <td>{job}</td>
+              </tr>
+            </Fragment>
           ))}
       </table>
       <span>

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LearnJest add info correctly 1`] = `<./LearnJest />`;
+
+exports[`LearnJest matches snapshot 1`] = `<./LearnJest />`;

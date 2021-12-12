@@ -1,13 +1,12 @@
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "jsdom",
-  testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(test).ts?(x)"],
+  moduleFileExtensions: ["js", "json", "jsx", "ts", "tsx", " css", "json"],
   transform: {
-    "^.+\\.(js|ts)$": "ts-jest",
+    "^.+\\.(js|jsx)?$": "babel-jest",
   },
-  transformIgnorePatterns: [
-    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.js$",
-    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.ts$",
-    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.tsx$",
-  ],
+  testEnvironment: "node",
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/$1",
+  },
+  testMatch: ["<rootDir>/**/*.test.(js|jsx|ts|tsx)", "<rootDir>/(tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx))"],
+  transformIgnorePatterns: ["<rootDir>/node_modules/"],
 };
